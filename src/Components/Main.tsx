@@ -8,13 +8,18 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
 const API_BASE = process.env.REACT_APP_API_BASE_URL;
-
+// ✅ instead, define a type for the file
+type UserFile = {
+  id: number;
+  name: string;
+  content: string;
+};
 const Main = () => {
     const [text, setText] = useState("");
     const [rightShowMenu, setRightShowMenu] = useState(false);
     const [leftShowMenu, setLeftShowMenu] = useState(false);
     const [userFiles, setUserFiles] = useState([]);
-    const [selectedFile, setSelectedFile] = useState<any | null>(null);
+    const [selectedFile, setSelectedFile] = useState<UserFile | null>(null);
     const [loading, setLoading] = useState(false);
     const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
 
