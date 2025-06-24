@@ -7,7 +7,7 @@ import LeftMenu from './LeftMenu';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-const API_BASE = process.env.REACT_APP_API_BASE_URL;
+const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL;
 // ✅ instead, define a type for the file
 type UserFile = {
   id: number;
