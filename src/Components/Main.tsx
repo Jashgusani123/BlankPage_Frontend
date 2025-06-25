@@ -28,7 +28,8 @@ const Main = () => {
 
     const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
     const firstFourWords = text.trim().split(/\s+/).slice(0, 4).join(" ");
-
+    console.log("Backend" , API_BASE);
+    
     const requestFullScreen = () => {
         const docElm = document.documentElement;
         if (docElm.requestFullscreen) docElm.requestFullscreen();

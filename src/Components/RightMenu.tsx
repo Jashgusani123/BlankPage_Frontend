@@ -24,7 +24,7 @@ const RightMenu = ({ fullScreen, removeBTN, saveOrUpdate, isUpdate, loading }: R
 
   const handleSubmit = async () => {
     try {
-      const url = isSignUp ? `${process.env.NEXT_PUBLIC_API}/auth/register` : `${process.env.NEXT_PUBLIC_API}/auth/login`;
+      const url = isSignUp ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/register` : `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`;
       const response = await fetch(url, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ const RightMenu = ({ fullScreen, removeBTN, saveOrUpdate, isUpdate, loading }: R
 
   const logoutHandle = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/logout`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/logout`, {
         method: "GET",
         credentials: "include"
       });
